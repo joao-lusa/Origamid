@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>latestTime: {{ acoes.latestTime }}</p>
+        <p>latestPrice: {{ acoes.latestPrice }}</p>
+        <p>companyName: {{ acoes.companyName }}</p>
+       <button @Click="PucharAcoes()">Puchar Acoes</button>
+    </div>
+
+     
+    <script>
+        const vm = new Vue({
+            el: "#app",
+            data:{
+                acoes: {},
+            },
+            methods: {
+                PucharAcoes(){
+                    fetch("https://cloud.iexapis.com/stable/stock/amzn/quote?token=sk_2369ea3b2ab14850927a3310c6345ac5")
+                    .then(response => response.json())
+                    .then(json => {
+                        this.acoes = json;
+                        console.log(json)
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+</html>

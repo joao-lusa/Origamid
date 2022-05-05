@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js</title>
+    <script src="./vue.js"></script>
+</head>
+<!--
+    Utilizando API
+    https://api.origamid.dev/stock/aapl/quote
+  
+    Adicione um evento de clique a cada <a> do html
+    acima e previna o comportamento padrão.
+  
+    Faça o fetch dos dados do href ao click e mostre na
+    interface o companyName, latestPrice, marketCap
+  -->
+
+<body>
+    <div id="app">
+        <ul>
+            <li><a @click.prevent="puxarAcao"
+                    href="https://api.origamid.dev/stock/aapl/quote?token=sk_2369ea3b2ab14850927a3310c6345ac5">Apple
+                </a>
+            </li>
+            <li><a @click.prevent="puxarAcao"
+                    href="https://api.origamid.dev/stock/googl/quote?token=sk_2369ea3b2ab14850927a3310c6345ac5">Google
+                </a>
+            </li>
+            <li><a @click.prevent="puxarAcao"
+                    href="https://api.origamid.dev/stock/amzn/quote?token=sk_2369ea3b2ab14850927a3310c6345ac5">Amazon
+                </a>
+            </li>
+            <li><a @click.prevent="puxarAcao"
+                    href="https://api.origamid.dev/stock/ebay/quote?token=sk_2369ea3b2ab14850927a3310c6345ac5">Ebay
+                </a>
+            </li>
+            <li><a @click.prevent="puxarAcao"
+                    href="https://api.origamid.dev/stock/pypl/quote?token=sk_2369ea3b2ab14850927a3310c6345ac5">Paypal
+                </a>
+            </li>
+        </ul>
+        <div>
+            <p>Empresa:{{ acao.companyName }}</p>
+            <p>Valor atual da ação: {{ acao.latestPrice }}</p>
+            <p>Valor atual de mercado: {{ acao.marketCap }}</p>
+        </div>
+
+    </div>
+
+
+    <script>
+        const vm = new Vue({
+            el: "#app",
+            data: {
+                acao: {}
+            },
+            methods: {
+                puxarAcao(event) {
+                    const url = event.currentTarget.href
+                    fetch(url)
+                        .then(r => r.json())
+                        .then(r => {
+                            this.acao = r;
+                        })
+                }
+            }
+        })
+    </script>
+    <style>
+
+    </style>
+</body>
+
+</html>
