@@ -11,14 +11,43 @@
 
 <body>
     <div id="app">
-        <input v-model="nome">
-        <input :value="email">
+        <input :value="endereco">
+        <br>
+        <input v-model.lazy="nome" placeholder="v-model do nome">
+        <br>
+        <input type="text" v-model.trim="email" placeholder="v-model email">
+        <br>
+        <input type="text" v-model.number="ano" placeholder="v-model do ano">
+
+        <p>:v-model endereço: {{ endereco }}</p>
         <p>nome: {{nome}}</p>
         <p>email: {{email}}</p>
+        <p>ano: {{ano}}</p>
 
         <input type="checkbox" id="receberEmail" v-model="receberEmail">
         <label for="receberEmail">Receber email</label>
         {{receberEmail}}
+
+        <div>
+            <input type="radio" name="Azul" id="Azul" v-model="cor" value="Azul">
+            <label for="Azul">Azul</label>
+            <input type="radio" name="Vermelho" id="Vermelho" v-model="cor" value="Vermelho">
+            <label for="Vermelho">Vermelho</label>
+            <input type="radio" name="Verde" id="Verde" v-model="cor" value="Verde">
+            <label for="Verde">Verde</label>
+
+            {{cor}}
+
+            <div>
+                <select v-model="fruta">
+                    <option disabled value="">Selecione a fruta</option>
+                    <option value="banana">Banana</option>
+                    <option value="morango">morango</option>
+                    <option value="uva">Uva</option>
+                </select>
+                {{fruta}}
+            </div>
+        </div>
 
     </div>
     <script>
@@ -27,8 +56,12 @@
             data: {
                 nome: "",
                 msg: "",
-                email: "dddddsadsa",
-                receberEmail: ''
+                email: "",
+                receberEmail: '',
+                cor: "",
+                fruta: "",
+                ano: "",
+                endereco: "dsadsadsadsadsa"
             },
             methods: {
 
@@ -40,28 +73,7 @@
         })
     </script>
     <style>
-        ul {
-            display: flex;
-            flex-wrap: wrap;
-            font-family: monospace;
-            list-style: none;
-            padding: 0px;
-            margin: 0px;
-        }
 
-        .column {
-            flex-direction: column;
-        }
-
-        li {
-            padding: 20px;
-            background: #84e;
-            color: white;
-            border-radius: 4px;
-            margin: 10px;
-            flex: 1;
-            text-align: center;
-        }
     </style>
 </body>
 
