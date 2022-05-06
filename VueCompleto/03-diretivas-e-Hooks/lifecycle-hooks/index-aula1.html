@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div>{{github.name}}</div>
+        <a :href="github.blog">liketee</a>
+    </div>
+    <script>
+        const vm = new Vue({
+            el: "#app",
+            data: {
+                mensagem: "esta é a mensagem",
+                github: {}
+            },
+            methods: {
+                puxarGithub() {
+                    fetch("https://api.github.com/users/joao-lusa")
+                        .then(r => r.json())
+                        .then(r => {
+                            this.github = r;
+                        })
+                }
+
+            },
+            beforeCreate() {
+                console.log("antes da criação");
+            },
+            created() {
+                this.puxarGithub()
+                console.log("Foi criado")
+                console.log("elemento", this.$el)
+            },
+            beforeMount() {
+                console.log("BeforeMount:", this.mensagem);
+                console.log("elemento", this.$el)
+            },
+            mounted() {
+                console.log("elemento", this.$el)
+            }
+
+        })
+    </script>
+    <style>
+
+
+    </style>
+</body>
+
+</html>
