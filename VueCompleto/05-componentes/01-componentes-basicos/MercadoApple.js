@@ -5,7 +5,7 @@ export default {
     template: `
         <div>
             <p>Valor de mercado apple: {{apple.marketCap}}</p>
-            <DolaReal></DolaReal>
+            <dola-real></dola-real>
         </div>
     `,
     data () {

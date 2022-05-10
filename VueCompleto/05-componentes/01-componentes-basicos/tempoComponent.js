@@ -1,7 +1,8 @@
-//api de clima estava dando erro com o cors
 export default {
     name:"TempoComponent",
-    //template: `<p>{{tempo}}</p>`,
+    template: `
+        <p>temperatura rio de janeiro: {{tempo}}</p>
+    `,
     data () {
         return {
             tempo: {},
@@ -9,10 +10,10 @@ export default {
     },
     methods: {
         fetchTempo(){
-            fetch("https://api.exchangeratesapi.io/latest?base=USD")
+            fetch("https://www.metaweather.com/api/location/455825/")
             .then(r => r.json())
             .then(r => {
-                this.tempo = r;
+                this.tempo = r.consolidated_weather[0].max_temp.toFixed(2);
             })
         }
     },
