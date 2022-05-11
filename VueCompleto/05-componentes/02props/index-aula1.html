@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./vue.js"></script>
+    <title>Vue.js</title>
+</head>
+
+<body>
+    <div id="app">
+        {{lista}}
+        <lista-produtos :frutas="lista" titulo="esse é o titulo"></lista-produtos>
+    </div>
+
+    <script type="module">
+
+        const ItemProduto = {
+            name: "ItemProduto",
+            // props: ["nomeFruta", "total"],
+            props: {
+                nomeFruta: String,
+                total: Number,
+                cor: {
+                    type: String,
+                    required: true
+                },
+                tamanho: {
+                    type: String,
+                    default: "Grande"
+                }
+            },
+            template: `
+                <li>
+                    <h2>{{nomeFruta}}</h2>
+                    Esse é o nome: {{nomeFruta}}
+                    {{total}}
+                    {{cor}}
+                    {{tamanho}}
+                </li>
+            `
+        }
+
+        const listaProdutos = {
+            name: "ListaProdutos",
+            props: ["frutas", "titulo"],
+            components: {
+                ItemProduto
+            },
+            template: `
+                <ul>
+                    <h1>{{titulo}}</h1>
+                    <item-produto 
+                        v-for="(fruta, index) in frutas"
+                        :key="index+frutas"
+                        :nomeFruta="fruta"
+                        :total="20"
+                        cor="azul"
+                    ></item-produto>
+                </ul>
+            `,
+        }
+
+        const vm = new Vue({
+            el: "#app",
+            data: {
+                lista: ["banana", "laranja", "uva"]
+            },
+            components: {
+                listaProdutos
+            }
+        })
+    </script>
+
+</body>
+
+</html>
