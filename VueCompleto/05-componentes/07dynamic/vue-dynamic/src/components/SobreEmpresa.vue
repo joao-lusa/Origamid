@@ -1,12 +1,12 @@
 <template>
   <div>
-    <p>Essa é a aula principal do curso .</p>
+    <p>Essa empresa é dos rapazes de SC, SC é o FLUXO!!!</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: "AulaDescricao",
+  name: "SobreEmpresa",
 };
 </script>
 
