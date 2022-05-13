@@ -1,13 +1,41 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <ul>
+      <li @click="componenteAtivo = 'PaginaSobre'">Sobre</li>
+      <li @click="componenteAtivo = 'PaginaServicos'">Serviços</li>
+    </ul>
+    <transition mode="out-in">
+      <component :is="componenteAtivo"></component>
+    </transition>
+  </div>
 </template>
 
 <script>
+import PaginaSobre from "./components/PaginaSobre.vue";
+import PaginaServicos from "./components/PaginasServicos.vue";
+
 export default {
-  name: "App",
-  components: {},
+  components: {
+    PaginaSobre,
+    PaginaServicos,
+  },
+  data() {
+    return {
+      componenteAtivo: "PaginaSobre",
+    };
+  },
 };
 </script>
 
 <style>
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.3s;
+}
+
+.v-enter,
+.v-leave-to {
+  opacity: 0;
+  transform: translate3d(0, -20px, 0);
+}
 </style>
