@@ -16,11 +16,25 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: Home
+      components: {
+        default: Home,
+        sidebar: Acoes
+      }
+    },
+    {
+      path: "/origamid",
+      redirect: "/"
+    },
+    {
+      path: "*",
+      redirect: "/"
     },
     {
       path: "/acoes",
-      component: Acoes,
+      components: {
+        default: Acoes,
+        sidebar: Home
+      },
       children: [
         {
           path: ":simbolo",
