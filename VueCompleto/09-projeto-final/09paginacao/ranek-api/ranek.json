@@ -10,6 +10,17 @@
       "numero": "25",
       "estado": "RJ",
       "cidade": "Rio de Janeiro"
+    },
+    {
+      "id":"joao@origamid.com",
+      "email": "joao@origamid.com",
+      "nome": "Joao",
+      "senha": "123",
+      "rua": "Rua Ali Perto",
+      "cep": "12345678",
+      "numero": "25",
+      "estado": "SC",
+      "cidade": "Sombrio"
     }
   ],
   "produto": [
