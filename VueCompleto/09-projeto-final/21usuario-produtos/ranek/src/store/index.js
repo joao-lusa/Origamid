@@ -1,15 +1,13 @@
-import { api } from '@/services'
-import Vue from 'vue'
-import Vuex from 'vuex'
-
-
-Vue.use(Vuex)
+import Vue from "vue";
+import Vuex from "vuex";
+import { api } from "@/services.js";
+Vue.use(Vuex);
 
 export default new Vuex.Store({
   strict: true,
   state: {
     login: false,
-    usuario:{
+    usuario: {
       id: "",
       nome: "",
       email: "",
@@ -19,32 +17,43 @@ export default new Vuex.Store({
       numero: "",
       bairro: "",
       cidade: "",
-      estado: "",
-
-    }
-  },
-  getters: {
+      estado: ""
+    },
+    usuario_produtos: null
   },
   mutations: {
-    UPDATE_LOGIN(state, payload){
-      state.login = payload
+    UPDATE_LOGIN(state, payload) {
+      state.login = payload;
     },
-    UPDATE_USUARIO(state, payload){
-      state.usuario = Object.assign(state.usuario, payload)
+    UPDATE_USUARIO(state, payload) {
+      state.usuario = Object.assign(state.usuario, payload);
+    },
+    UPDATE_USUARIO_PRODUTOS(state, payload) {
+      state.usuario_produtos = payload;
+    },
+    ADD_USUARIO_PRODUTOS(state, payload) {
+      state.usuario_produtos.unshit(payload);
     }
   },
   actions: {
-    getUsuario(context, payload){
-     return api.get(`/usuario/${payload}`).then(r=>{
-        context.commit("UPDATE_USUARIO", r.data);
-        context.commit("UPDATE_LOGIN", true)
-      })
+    getUsuarioProdutos(context) {
+      api
+        .get(`/produto?usuario_id=${context.state.usuario.id}`)
+        .then(response => {
+          context.commit("UPDATE_USUARIO_PRODUTOS", response.data);
+        });
+    },
+    getUsuario(context, payload) {
+      return api.get(`/usuario/${payload}`).then(response => {
+        context.commit("UPDATE_USUARIO", response.data);
+        context.commit("UPDATE_LOGIN", true);
+      });
     },
     criarUsuario(context, payload) {
       context.commit("UPDATE_USUARIO", { id: payload.email });
       return api.post("/usuario", payload);
     },
-    deslogarUsuario(context){
+    deslogarUsuario(context) {
       context.commit("UPDATE_USUARIO", {
         id: "",
         nome: "",
@@ -55,9 +64,9 @@ export default new Vuex.Store({
         numero: "",
         bairro: "",
         cidade: "",
-        estado: "",
+        estado: ""
       });
-      context.commit("UPDATE_LOGIN", false)
+      context.commit("UPDATE_LOGIN", false);
     }
-  },
-})
+  }
+});
