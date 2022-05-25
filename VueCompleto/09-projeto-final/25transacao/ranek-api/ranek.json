@@ -1,7 +1,7 @@
 {
-  "usuario": [
+  "usuario":[
     {
-      "id": "andre@origamid.com",
+      "id":"andre@origamid.com",
       "email": "andre@origamid.com",
       "nome": "André Rafael",
       "senha": "123",
@@ -10,18 +10,6 @@
       "numero": "25",
       "estado": "RJ",
       "cidade": "Rio de Janeiro"
-    },
-    {
-      "id": "joao@123",
-      "nome": "joao",
-      "email": "joao@123",
-      "senha": "123",
-      "cep": "12345678",
-      "rua": "Rua Ali Perto",
-      "numero": "150",
-      "bairro": "Ali pertoo",
-      "cidade": "Rio de Janeiro",
-      "estado": "RJ"
     }
   ],
   "produto": [
@@ -30,7 +18,7 @@
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
       "preco": "4999",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o novo notebook.",
       "fotos": null
     },
@@ -39,7 +27,7 @@
       "nome": "Smartphone",
       "usuario_id": "andre@origamid.com",
       "preco": "1999",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o noco smartphone.",
       "fotos": null
     },
@@ -48,7 +36,7 @@
       "nome": "Tablet",
       "usuario_id": "andre@origamid.com",
       "preco": "1399",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o noco tablet.",
       "fotos": null
     },
@@ -57,7 +45,7 @@
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
       "preco": "4999",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o novo notebook.",
       "fotos": null
     },
@@ -66,7 +54,7 @@
       "nome": "Smartphone",
       "usuario_id": "andre@origamid.com",
       "preco": "1999",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o noco smartphone.",
       "fotos": null
     },
@@ -75,7 +63,7 @@
       "nome": "Tablet",
       "usuario_id": "andre@origamid.com",
       "preco": "1399",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o noco tablet.",
       "fotos": null
     },
@@ -84,7 +72,7 @@
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
       "preco": "4999",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o novo notebook.",
       "fotos": null
     },
@@ -93,7 +81,7 @@
       "nome": "Smartphone",
       "usuario_id": "andre@origamid.com",
       "preco": "1999",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o noco smartphone.",
       "fotos": null
     },
@@ -102,7 +90,7 @@
       "nome": "Tablet",
       "usuario_id": "andre@origamid.com",
       "preco": "1399",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o noco tablet.",
       "fotos": null
     },
@@ -111,7 +99,7 @@
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
       "preco": "4999",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o novo notebook.",
       "fotos": null
     },
@@ -120,7 +108,7 @@
       "nome": "Smartphone",
       "usuario_id": "andre@origamid.com",
       "preco": "1999",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o noco smartphone.",
       "fotos": null
     },
@@ -129,7 +117,7 @@
       "nome": "Tablet",
       "usuario_id": "andre@origamid.com",
       "preco": "1399",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o noco tablet.",
       "fotos": null
     },
@@ -138,7 +126,7 @@
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
       "preco": "4999",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o novo notebook.",
       "fotos": null
     },
@@ -147,7 +135,7 @@
       "nome": "Smartphone",
       "usuario_id": "andre@origamid.com",
       "preco": "1999",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o noco smartphone.",
       "fotos": null
     },
@@ -156,7 +144,7 @@
       "nome": "Tablet",
       "usuario_id": "andre@origamid.com",
       "preco": "1399",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o noco tablet.",
       "fotos": null
     },
@@ -165,7 +153,7 @@
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
       "preco": "4999",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o novo notebook.",
       "fotos": null
     },
@@ -174,7 +162,7 @@
       "nome": "Smartphone",
       "usuario_id": "andre@origamid.com",
       "preco": "1999",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o noco smartphone.",
       "fotos": null
     },
@@ -183,7 +171,7 @@
       "nome": "Tablet",
       "usuario_id": "andre@origamid.com",
       "preco": "1399",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o noco tablet.",
       "fotos": null
     },
@@ -192,7 +180,7 @@
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
       "preco": "4999",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o novo notebook.",
       "fotos": null
     },
@@ -201,7 +189,7 @@
       "nome": "Smartphone",
       "usuario_id": "andre@origamid.com",
       "preco": "1999",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o noco smartphone.",
       "fotos": null
     },
@@ -210,7 +198,7 @@
       "nome": "Tablet",
       "usuario_id": "andre@origamid.com",
       "preco": "1399",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o noco tablet.",
       "fotos": null
     },
@@ -219,7 +207,7 @@
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
       "preco": "4999",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o novo notebook.",
       "fotos": null
     },
@@ -228,7 +216,33 @@
       "nome": "Smartphone",
       "usuario_id": "andre@origamid.com",
       "preco": "1999",
-      "vendido": "false",
+      "vendido":"false",
+      "descricao": "Esse é o noco smartphone.",
+      "fotos": null
+    },{
+      "id": "tablet",
+      "nome": "Tablet",
+      "usuario_id": "andre@origamid.com",
+      "preco": "1399",
+      "vendido":"false",
+      "descricao": "Esse é o noco tablet.",
+      "fotos": null
+    },
+    {
+      "id": "notebook",
+      "nome": "Notebook",
+      "usuario_id": "andre@origamid.com",
+      "preco": "4999",
+      "vendido":"false",
+      "descricao": "Esse é o novo notebook.",
+      "fotos": null
+    },
+    {
+      "id": "smartphone",
+      "nome": "Smartphone",
+      "usuario_id": "andre@origamid.com",
+      "preco": "1999",
+      "vendido":"false",
       "descricao": "Esse é o noco smartphone.",
       "fotos": null
     },
@@ -237,7 +251,7 @@
       "nome": "Tablet",
       "usuario_id": "andre@origamid.com",
       "preco": "1399",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o noco tablet.",
       "fotos": null
     },
@@ -246,7 +260,7 @@
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
       "preco": "4999",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o novo notebook.",
       "fotos": null
     },
@@ -255,7 +269,7 @@
       "nome": "Smartphone",
       "usuario_id": "andre@origamid.com",
       "preco": "1999",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o noco smartphone.",
       "fotos": null
     },
@@ -264,7 +278,7 @@
       "nome": "Tablet",
       "usuario_id": "andre@origamid.com",
       "preco": "1399",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o noco tablet.",
       "fotos": null
     },
@@ -273,7 +287,7 @@
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
       "preco": "4999",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o novo notebook.",
       "fotos": null
     },
@@ -282,50 +296,9 @@
       "nome": "Smartphone",
       "usuario_id": "andre@origamid.com",
       "preco": "1999",
-      "vendido": "false",
+      "vendido":"false",
       "descricao": "Esse é o noco smartphone.",
       "fotos": null
-    },
-    {
-      "id": "tablet",
-      "nome": "Tablet",
-      "usuario_id": "andre@origamid.com",
-      "preco": "1399",
-      "vendido": "false",
-      "descricao": "Esse é o noco tablet.",
-      "fotos": null
-    },
-    {
-      "id": "notebook",
-      "nome": "Notebook",
-      "usuario_id": "andre@origamid.com",
-      "preco": "4999",
-      "vendido": "false",
-      "descricao": "Esse é o novo notebook.",
-      "fotos": null
-    },
-    {
-      "id": "smartphone",
-      "nome": "Smartphone",
-      "usuario_id": "andre@origamid.com",
-      "preco": "1999",
-      "vendido": "false",
-      "descricao": "Esse é o noco smartphone.",
-      "fotos": null
-    },
-    {
-      "id": "57QBvtc"
-    },
-    {
-      "id": "0dXdBlC"
-    },
-    {
-      "nome": "Pod",
-      "preco": "116",
-      "descricao": "vapoor",
-      "fotos": null,
-      "usuario_id": "joao@123",
-      "id": "d_eCikK"
     }
   ]
 }
