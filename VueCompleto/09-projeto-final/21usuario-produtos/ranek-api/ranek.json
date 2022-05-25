@@ -322,10 +322,11 @@
     {
       "nome": "Pod",
       "preco": "116",
-      "descricao": "vapoor",
+      "descricao": "VAPOR",
       "fotos": null,
+      "vendido": "false",
       "usuario_id": "joao@123",
-      "id": "d_eCikK"
+      "id": "FDwMaOR"
     }
   ]
 }
