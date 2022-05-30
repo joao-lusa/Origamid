@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha512-3BBFWr73Xrf8GRjO+0pl0cbVwESBvg3ovnuCXpoqOkC/mkt/hTkFtutUPrwRz8eLySYvy5v1daulkyUZYvH8jw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <input type="file" multiple>
+  <button>Enviar</button>
+  
+  <script>
+    const input = document.querySelector("input");
+    const button = document.querySelector("button");
+
+    button.addEventListener("click", handleClick);
+
+    const options = {
+      headers: {
+        'Authorization': "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9yYW5la2FwaWxvY2FsLmxvY2FsIiwiaWF0IjoxNjUzOTE1OTk1LCJuYmYiOjE2NTM5MTU5OTUsImV4cCI6bnVsbCwiZGF0YSI6eyJ1c2VyIjp7ImlkIjoiNCJ9fX0.00u32dRHgkABKquo_t4MNUjbsx7cfSGPqWYhzXl8Iik"
+      }
+    }
+
+    function handleClick(){
+      const files = input.files;
+      const form = new FormData();
+
+      for (let i = 0; i < files.length; i++){
+        form.append(files[i].name, files[i]);
+      }
+
+      form.append("nome", "Notebook")
+      form.append("descricao", "Esse é usado")
+      form.append("preco", "1299")
+
+      axios.post("http://ranekapilocal.local/wp-json/api/produto", form, options);
+    }
+  </script>
+</body>
+</html>
