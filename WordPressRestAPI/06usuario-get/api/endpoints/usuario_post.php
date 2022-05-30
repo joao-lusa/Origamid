@@ -1,9 +1,9 @@
 <?php
 
-function api_usurio_post($request){
+function api_usuario_post($request) {
   $email = sanitize_email($request['email']);
+  $senha = $request['senha'];
   $nome = sanitize_text_field($request['nome']);
-  $senha = sanitize_text_field($request['senha']);
   $rua = sanitize_text_field($request['rua']);
   $cep = sanitize_text_field($request['cep']);
   $numero = sanitize_text_field($request['numero']);
@@ -12,14 +12,14 @@ function api_usurio_post($request){
   $estado = sanitize_text_field($request['estado']);
 
   $user_exists = username_exists($email);
-  $email_exists = username_exists($email);
+  $email_exists = email_exists($email);
 
-  if(!$user_exists && !$emial_exists && $email && $senha){
+  if(!$user_exists && !$email_exists && $email && $senha) {
     $user_id = wp_create_user($email, $senha, $email);
 
-    $response =  array(
+    $response = array(
       'ID' => $user_id,
-      'display_name' => nome,
+      'display_name' => $nome,
       'first_name' => $nome,
       'role' => 'subscriber',
     );
@@ -31,22 +31,22 @@ function api_usurio_post($request){
     update_user_meta($user_id, 'bairro', $bairro);
     update_user_meta($user_id, 'cidade', $cidade);
     update_user_meta($user_id, 'estado', $estado);
-  }else{
+  } else {
     $response = new WP_Error('email', 'Email já cadastrado.', array('status' => 403));
   }
-
   return rest_ensure_response($response);
 }
 
-function registrar_api_usurio_post(){
+function registrar_api_usuario_post() {
   register_rest_route('api', '/usuario', array(
     array(
       'methods' => WP_REST_Server::CREATABLE,
-      'callback' => 'api_usurio_post',
+      'callback' => 'api_usuario_post',
     ),
-    ));
+  ));
 }
 
-add_action('rest_api_init', 'registrar_api_usurio_post')
+add_action('rest_api_init', 'registrar_api_usuario_post');
+
 
 ?>
