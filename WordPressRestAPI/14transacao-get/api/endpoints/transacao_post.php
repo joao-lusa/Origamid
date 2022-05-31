@@ -25,7 +25,7 @@ function api_transacao_post($request) {
       'meta_input' => array(
         'comprador_id' => $comprador_id,
         'vendedor_id' => $vendedor_id,
-        'endereco' => $endereco,
+        'endereco' => $endereco, 
         'produto' => $produto,
       ),
     );
